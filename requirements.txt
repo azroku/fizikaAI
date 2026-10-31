@@ -1,0 +1,9 @@
+streamlit
+openai
+python-dotenv
+groq
+sentence-transformers
+python-docx
+numpy
+torch
+supabase
