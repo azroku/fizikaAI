@@ -1,22 +1,16 @@
 import os
 from functools import lru_cache
 import json
-
-from dotenv import load_dotenv
 from groq import Groq
 
 from config import KNOWLEDGE_BASES
 from rag.retriever import PhysicsRetriever
 
 import re
+import streamlit as st
 
-
-load_dotenv()
-
-
-client = Groq(
-    api_key=os.getenv("GROQ_API_KEY")
-)
+GROQ_API_KEY = st.secrets["GROQ_API_KEY"]
+client = Groq(api_key=GROQ_API_KEY)
 
 
 # --------------------------------------------------
